@@ -1,41 +1,60 @@
-let time = Date.now();
-console.log(time);
+retrieve();
+setInterval(currentTime, 100);
+let hour = moment().format('HH');
 
-setInterval(currentTime, 1000);
 
 function currentTime(){
     let today = moment();
     $('#currentDay').text(today.format('dddd, MMMM Do'));
-}
-// function currentHour(){
-//     let today = moment();
-//     let hour = (today.format('hh'));
-//     console.log(hour);
-// }
-// currentHour();
-
-// let currentHour = moment().format('H');
-
-// console.log(currentHour);
-
-// let nowTime = Date('December 25, 1995 23:15:30');
-// let nowHour = nowTime.getHours();
-
-// localStorage.getItem("hourlyTask", hourlyTask);
-// let button = $('.btn');
-let button = document.querySelector('.btn');
-
-// button.on('click',assignTask);
-// let hourlyTask = $('<textarea>');
-
-addEventListener('click', assignTask);
-
-let hourlyTask = document.querySelector('.task').value;
-let hourOfDay = document.querySelector('.TOD');
-
-function assignTask(){
-    localStorage.setItem('hourOfDay','hourlyTask');
+    
+    
+    
 }
 
+// $('.textarea').each(function(){
+//     let blockTime = $(this).attr(data-number);
+//     console.log(blockTime);
+// })
 
+
+
+    
+    
+
+
+
+
+let content = localStorage.getItem("hourOfDay");
+let button = $('button');
+
+
+
+let taskHour;
+let hourlyTask;
+
+
+
+button.on('click',assignTask);
+
+
+function assignTask(event){
+    let selectedRow = event.target;
+    hourlyTask = selectedRow.previousElementSibling.value;
+    taskHour = selectedRow.dataset.number;
+    console.log(taskHour)
+    let tod = selectedRow.dataset.number;
+    
+    localStorage.setItem(taskHour,hourlyTask);
+}
+function retrieve(){
+    $("#hour9 .textarea").val(localStorage.getItem('9'));
+    $("#hour10 .textarea").val(localStorage.getItem('10'));
+    $("#hour11 .textarea").val(localStorage.getItem('11'));
+    $("#hour12 .textarea").val(localStorage.getItem('12'));
+    $("#hour13 .textarea").val(localStorage.getItem('13'));
+    $("#hour14 .textarea").val(localStorage.getItem('14'));
+    $("#hour15 .textarea").val(localStorage.getItem('15'));
+    $("#hour16 .textarea").val(localStorage.getItem('16'));
+    $("#hour17 .textarea").val(localStorage.getItem('17'));
+}
 
