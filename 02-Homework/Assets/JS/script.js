@@ -1,6 +1,6 @@
 retrieve();
 setInterval(currentTime, 100);
-let hour = moment().format('HH');
+let tod = moment().format('HH');
 
 
 function currentTime(){
@@ -11,10 +11,24 @@ function currentTime(){
     
 }
 
-// $('.textarea').each(function(){
-//     let blockTime = $(this).attr(data-number);
-//     console.log(blockTime);
-// })
+$('.textarea').each(function(){
+    let blockTime = $(this).attr('data-number');
+    if(tod === blockTime){
+        $(this).addClass('bg-secondary');
+        $(this).removeClass('bg-danger');
+        $(this).removeClass('bg-success');
+    } else if(tod > blockTime){
+        $(this).addClass('bg-danger');
+        $(this).removeClass('bg-success');
+        $(this).removeClass('bg-secondary');
+    } else if(tod < blockTime){
+        $(this).addClass('bg-success');
+        $(this).removeClass('bg-danger');
+        $(this).removeClass('bg-secondary');
+
+    }
+    console.log(blockTime);
+})
 
 
 
@@ -42,7 +56,6 @@ function assignTask(event){
     hourlyTask = selectedRow.previousElementSibling.value;
     taskHour = selectedRow.dataset.number;
     console.log(taskHour)
-    let tod = selectedRow.dataset.number;
     
     localStorage.setItem(taskHour,hourlyTask);
 }
