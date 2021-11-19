@@ -8,10 +8,11 @@ This is a work day scheduler app! An individual can enter their tasks for the da
 
 ```
 Below are screen shots and a link to my calendar. I hope you enjoy.
-
+https://dhoneyman.github.io/DailyEventPlanner/
 
 ```
 
 ![screen shot of work day scheduler](assets/ss1.png)
 ![screen shot of work day scheduler](assets/ss2.png)
+
 
