@@ -21,6 +21,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/143a60dc13.js" crossorigin="anonymous"></script>
+
     <title>Work Day Scheduler</title>
   </head>
 
@@ -30,41 +32,12 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-      <!-- Timeblocks go here -->
-<!-- <div class="container">
-  <div class="row justify-content-md-center">
-    <div class="TOD col- bg-light border-top border-right border-bottom rounded">
-      9 am
-    </div>
-    <textarea class="task col-xl bg-success rounded border">
-    </textarea>
-    <button class="col- bg-info rounded border text-center btn">
-      <img src='../Assets/floppy-disk (3).png' class='center-block'/>
-    </button>
-  </div>
-</div>
-  <div class='container'>
-  <div class="row justify-content-md-center">
-    <div class="TOD col- bg-light border-top border-right border-bottom rounded align-text-bottom">
-      10 am
-    </div>
-    <textarea class="task col-xl bg-success rounded border">
-    </textarea>
-    <button class="col- bg-info rounded border text-center">
-      <img src='../Assets/floppy-disk (3).png'/>
-    </button>
-  </div>
-  </div> -->
-
-
-
-
   <div class="container">
     <div id='hour9' class="row">
       <div class="tod col border rounded">
         9am
       </div>
-      <textarea class="textarea col-10 border rounded bg-success" data-number='9'>
+      <textarea class="textarea col-10 border rounded bg-success" data-number='09'>
       </textarea>
       <button class="col border rounded bg-info" data-number='9'>
         <img src='../Assets/floppy-disk (3).png'/>
@@ -167,7 +140,10 @@
       </button>
     </div>
   </div>
-  
+<div class='d-flex justify-content-center'>
+  <button class='clear'>Clear Schedule</button>
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src='../Assets/JS/script.js'></script>

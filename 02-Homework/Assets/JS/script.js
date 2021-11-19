@@ -7,9 +7,6 @@ function currentTime(){
     let today = moment();
     $('#currentDay').text(today.format('dddd, MMMM Do'));
     
-    
-    
-}
 
 $('.textarea').each(function(){
     let blockTime = $(this).attr('data-number');
@@ -28,18 +25,19 @@ $('.textarea').each(function(){
 
     }
     console.log(blockTime);
+    console.log(tod);
 })
 
+}
 
 
+$('.clear').on('click',function(){
+    localStorage.clear();
+    window.location.reload()
+});
     
     
 
-
-
-
-let content = localStorage.getItem("hourOfDay");
-let button = $('button');
 
 
 
@@ -48,7 +46,7 @@ let hourlyTask;
 
 
 
-button.on('click',assignTask);
+$('button').on('click',assignTask);
 
 
 function assignTask(event){
